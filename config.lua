@@ -1,7 +1,7 @@
 Config = {}
 
-Config.Label_RemoveClothes = 'Leveszed a ruháidat...'
-Config.Label_PutBackClothes = 'A ruháid leadása...'
+Config.Label_RemoveClothes = 'Leveszed a ruhádat...'
+Config.Label_PutBackClothes = 'Fel veszed a ruhádat...'
 
 
 Config.Male = {
