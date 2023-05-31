@@ -14,12 +14,12 @@ lib.registerContext({
     id = 'menuf5',
     title = 'Kiegészitő',
     options = {
-        -- {
-        --     title = '🎒 Portefeuille',
-        --     arrow = true,
-        --     icon = 'bars',
-        --     menu = 'portefeuille',   
-        -- },
+      {
+        title = '🎒Pénztárca',
+        arrow = true,
+        icon = 'bars',
+        menu = 'portefeuille',   
+       },
         {
             title = '👕 Kiegészitő Menu',
             arrow = true,
@@ -92,28 +92,28 @@ lib.registerContext({
 })
 
 
--- lib.registerContext({
---     id = 'portefeuille',
---     title = 'Porte Feuille',
---     options = {
---         {
---             title = '📎 Carte identité',
---             event = 'montrer:identity'
---         },
---         {
---             title = '📎 Permis Conduire',
---             event = 'montrer:drive'
---         },
---         {
---             title = '📎 Permis Arme',
---             event = 'montrer:ppa'
---         },
---         {
---             title = 'Go Back',
---             menu = 'menuf5',
---         },
---     }
--- })
+   lib.registerContext({
+    id = 'portefeuille',
+   title = 'Pénztárca',
+   options = {
+        {
+           title = '📎 Személyi igazolvány',
+           event = 'montrer:identity'
+        },
+        {
+         title = '📎 Vezetői engedély',
+          event = 'montrer:drive'
+      },
+      {
+          title = '📎 Fegyverengedély',
+          event = 'montrer:ppa'
+     },
+       {
+            title = 'Visszalépés',
+          menu = 'menuf5',
+       },
+   }
+})
 
 Citizen.CreateThread(function()
     while true do
