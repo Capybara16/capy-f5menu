@@ -464,12 +464,12 @@ AddEventHandler('remove:torso', function(source, args, rawCommand)
             SetPedComponentVariation(ped, 8,  Config.Male.Shirt, 0, 0)
             if DrawableGloves ~= Config.Male.Gloves then
                 SetPedComponentVariation(ped, 3, Config.Male.Gloves, 0, 0)
-                ESX.ShowNotification("Levetted a pólódat!")
+                ESX.ShowNotification("Vous avez enlevé votre chemise !")
             end
             TriggerServerEvent('add:clothestorso', DrawableTorso, TextureTorso, DrawableGloves, TextureGloves, DrawableTshirt, TextureTshirt, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification("Levetted a pólódat!")
+            ESX.ShowNotification("Vous avez enlevé votre chemise !")
         end
     elseif gender == 'Female' then
         if DrawableTorso ~= Config.Female.Torso and not IsAnim then
@@ -477,14 +477,14 @@ AddEventHandler('remove:torso', function(source, args, rawCommand)
             torsoonoff()
             SetPedComponentVariation(ped, 11, Config.Female.Torso, 0, 0)
             SetPedComponentVariation(ped, 8,  Config.Female.Shirt, 0, 0)
-            ESX.ShowNotification("Levetted a pólódat!")
+            ESX.ShowNotification("Vous avez enlevé votre chemise !")
             if DrawableGloves ~= Config.Female.Gloves then
                 SetPedComponentVariation(ped, 3, Config.Female.Gloves, 0, 0)
             end
             TriggerServerEvent('add:clothestorso', DrawableTorso, TextureTorso, DrawableGloves, TextureGloves, DrawableTshirt, TextureTshirt, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification("Levetted a pólódat!")
+            ESX.ShowNotification("Vous avez enlevé votre chemise !")
         end
     end
 end, false) 
@@ -501,24 +501,24 @@ AddEventHandler('remove:pants', function(source, args, rawCommand)
             IsAnim = true
             pantsonoff()
             SetPedComponentVariation(ped, 4, Config.Male.Pants, 1, 2)
-            ESX.ShowNotification("Levetted a nadrágodat!")
+            ESX.ShowNotification("Vous avez enlevé votre pantalon !")
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
             IsAnim = false
-            ESX.ShowNotification("Már le is vetted a nadrágodat!")
+            ESX.ShowNotification("Vous avez déjà enlevé votre pantalon !")
         end
     elseif gender == 'Female' then
         if Drawable ~= Config.Female.Pants and not IsAnim then
             IsAnim = true
             pantsonoff()
             SetPedComponentVariation(ped, 4, Config.Female.Pants, 1, 2)
-            ESX.ShowNotification("Levetted a nadrágodat!")
+            ESX.ShowNotification("Vous avez enlevé votre pantalon !")
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
             IsAnim = false
-            ESX.ShowNotification("Már le is vetted a nadrágodat!")
+            ESX.ShowNotification("Vous avez déjà enlevé votre pantalon !")
         end
     end
     
@@ -536,24 +536,24 @@ AddEventHandler('remove:shoes', function(source, args, rawCommand)
             IsAnim = true
             shoesonoff()
             SetPedComponentVariation(ped, 6, Config.Male.Shoes, 0, 2)
-            ESX.ShowNotification('Levetted a cipődet!')
+            ESX.ShowNotification('Vous avez enlevé vos chaussures!')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
             IsAnim = false
-            ESX.ShowNotification("Már le is vetted a cipődet!")
+            ESX.ShowNotification("Vous avez déjà enlevé vos chaussures !")
         end
     elseif gender == 'Female' then
         if Drawable ~= Config.Female.Shoes and not IsAnim then
             IsAnim = true
             shoesonoff()
             SetPedComponentVariation(ped, 6, Config.Female.Shoes, 0, 2)
-            ESX.ShowNotification('Levetted a cipődet!')
+            ESX.ShowNotification('Vous avez enlevé vos chaussures')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
             IsAnim = false
-            ESX.ShowNotification("Már le is vetted a cipődet!")
+            ESX.ShowNotification("Vous avez déjà enlevé vos chaussures !")
         end
     end
 end, false) 
@@ -570,23 +570,23 @@ AddEventHandler('remove:mask', function(source, args, rawCommand)
             IsAnim = true
             maskonoff()
             SetPedComponentVariation(ped, 1, Config.Male.Mask, 0, 2)
-            ESX.ShowNotification('Levetted a maszkodat')
+            ESX.ShowNotification('Vous avez enlevé votre masque')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
             IsAnim = false
-            ESX.ShowNotification('Nincs maszkod.')
+            ESX.ShowNotification('Tu n\'as pas de masque')
         end
     elseif gender == 'Female' then
         if Drawable ~= Config.Female.Mask and not IsAnim then
             IsAnim = true
             maskonoff()
             SetPedComponentVariation(ped, 1, Config.Female.Mask, 0, 2)
-            ESX.ShowNotification('Levetted a maszkodat')
+            ESX.ShowNotification('Vous avez enlevé votre masque')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Nincs maszkod.')
+            ESX.ShowNotification('Tu n\'as pas de masque!')
         end
     end
 end, false) 
@@ -603,22 +603,22 @@ AddEventHandler('remove:hat', function(source, args, rawCommand)
             IsAnim = true
             hatofon()
             ClearPedProp(ped, 0)
-            ESX.ShowNotification('Levetted a sapkádat')
+            ESX.ShowNotification('Vous avez enlevé votre chapeau')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Nincs sapkád.')
+            ESX.ShowNotification('Tu as pas de chapeau')
         end
     elseif gender == 'Female' then
         if Drawable ~= Config.Female.Hat and not IsAnim then
             IsAnim = true
             hatofon()
             ClearPedProp(ped, 0)
-            ESX.ShowNotification('Levetted a sapkádat')
+            ESX.ShowNotification('Vous avez enlevé votre chapeau')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Nincs sapkád.')
+            ESX.ShowNotification('You dont have hat!')
         end
     end
 end, false) 
@@ -635,22 +635,22 @@ AddEventHandler('remove:bag', function(source, args, rawCommand)
             IsAnim = true
             bagonoff()
             SetPedComponentVariation(ped, 5, Config.Male.Bag, 0, 2)
-            ESX.ShowNotification('Le raktad a táskát')
+            ESX.ShowNotification('You removed your bag!')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs táskád!')
+            ESX.ShowNotification('You dont have bag!')
         end
     elseif gender == 'Female' then
         if Drawable ~= Config.Female.Bag and not IsAnim  then
             IsAnim = true
             bagonoff()
             SetPedComponentVariation(ped, 5, Config.Female.Bag, 0, 2)
-            ESX.ShowNotification('Le raktad a táskát')
+            ESX.ShowNotification('You removed your bag!')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs táskád!')
+            ESX.ShowNotification('You dont have bag!')
         end
     end
 end, false) 
@@ -667,22 +667,22 @@ AddEventHandler('remove:glasses', function(source, args, rawCommand)
             IsAnim = true
             glassesonoff()
             ClearPedProp(ped, 1)
-            ESX.ShowNotification('Levetted a szemüveged!')
+            ESX.ShowNotification('You removed your glasses!')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Nincs szemüveged!')
+            ESX.ShowNotification('You dont have glasses!')
         end
     elseif gender == 'Female' then
         if Drawable ~= Config.Female.Glasses and not IsAnim  then
             IsAnim = true
             glassesonoff()
             ClearPedProp(ped, 1)
-            ESX.ShowNotification('Levetted a szemüveged!')
+            ESX.ShowNotification('You removed your glasses!')
             TriggerServerEvent('add:clothes', Drawable, Texture, theProp, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Nincs szemüveged!')
+            ESX.ShowNotification('You dont have glasses!')
         end
     end
 end, false) 
@@ -699,22 +699,22 @@ AddEventHandler('remove:vest', function(source, args, rawCommand)
             IsAnim = true
             vestonoff()
             SetPedComponentVariation(ped, 9, Config.Male.Vest, 0, 0)
-            ESX.ShowNotification('Levetted a mellényedet!')
+            ESX.ShowNotification('You removed your vest!')
             TriggerServerEvent('add:clothes', vest1, vest2, theType, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs mellényed!')
+            ESX.ShowNotification('You dont have vest!')
         end
     elseif gender == 'Female' then
         if vest1 ~= Config.Female.Vest and not IsAnim then
             IsAnim = true
             vestonoff()
             SetPedComponentVariation(ped, 9, Config.Female.Vest, 0, 0)
-            ESX.ShowNotification('Levetted a mellényedet!')
+            ESX.ShowNotification('You removed your vest!')
             TriggerServerEvent('add:clothes', vest1, vest2, theType, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs mellényed!')
+            ESX.ShowNotification('You dont have vest!')
         end
     end
     
@@ -732,22 +732,22 @@ AddEventHandler('remove:ears', function(source, args, rawCommand)
             IsAnim = true
             earsonoff()
             ClearPedProp(ped, 2)
-            ESX.ShowNotification('Levetted a fülbevalóidat!')
+            ESX.ShowNotification('You removed your earrings!')
             TriggerServerEvent('add:clothes', skin1, skin2, theType, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs fülbevalód!')
+            ESX.ShowNotification('You dont have earrings!')
         end
     elseif gender == 'Female' then
         if GetPedPropIndex(ped, 2) ~= Config.Female.Ears and not IsAnim  then
             IsAnim = true
             earsonoff()
             ClearPedProp(ped, 2)
-            ESX.ShowNotification('Levetted a fülbevalóidat!')
+            ESX.ShowNotification('You removed your earrings!')
             TriggerServerEvent('add:clothes', skin1, skin2, theType, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs fülbevalód!')
+            ESX.ShowNotification('You dont have earrings!')
         end
     end
 end, false) 
@@ -764,22 +764,22 @@ AddEventHandler('remove:chain', function(source, args, rawCommand)
             IsAnim = true
             chainonoff()
             SetPedComponentVariation(ped, 7, Config.Male.Chain, 0, 2)
-            ESX.ShowNotification('Levetted a láncodat!')
+            ESX.ShowNotification('You removed your chain!')
             TriggerServerEvent('add:clothes', skin1, skin2, theType, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs láncod!')
+            ESX.ShowNotification('You dont have chain!')
         end
     elseif gender == 'Female' then
         if GetPedDrawableVariation(ped, 7) ~= Config.Female.Chain and not IsAnim  then
             IsAnim = true
             chainonoff()
             SetPedComponentVariation(ped, 7, Config.Female.Chain, 0, 2)
-            ESX.ShowNotification('Levetted a láncodat!')
+            ESX.ShowNotification('You removed your chain!')
             TriggerServerEvent('add:clothes', skin1, skin2, theType, gender)
             IsAnim = false
         else
-            ESX.ShowNotification('Neked nincs láncod!')
+            ESX.ShowNotification('You dont have chain!')
         end
     end
 end, false) 
@@ -798,122 +798,122 @@ function IsMpPed(ped)
 end
 
 function torsoonoff()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
     progressvetement()
 end
 			
 function hatofon()
-    Txpac.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
+    capy.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
     progressvetement()
 end
 					
 function maskonoff()				
-    Txpac.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
+    capy.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
     progressvetement()
 end
 
 function earsonoff()
-    Txpac.PlayAnim("mp_cp_stolen_tut", "b_think", 600)  
+    capy.PlayAnim("mp_cp_stolen_tut", "b_think", 600)  
     progressvetement()			             
 end			
 function tshirtonoff()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
     progressvetement()		           
 end
 			
 function armsonoff()	
-    Txpac.PlayAnim("nmt_3_rcm-10", "cs_nigel_dual-10", 600) 	
+    capy.PlayAnim("nmt_3_rcm-10", "cs_nigel_dual-10", 600) 	
     progressvetement()			            
 end
 			
 function pantsonoff()
-    Txpac.PlayAnim("re@construction", "out_of_breath", 1300)	
+    capy.PlayAnim("re@construction", "out_of_breath", 1300)	
     progressvetement()			           
 end
 			
 function shoesonoff()
-    Txpac.PlayAnim("random@domestic", "pickup_low", 1300)		
+    capy.PlayAnim("random@domestic", "pickup_low", 1300)		
     progressvetement()
 end
 			
 function bagonoff()
-    Txpac.PlayAnim("anim@heists@ornate_bank@grab_cash", "intro", 1300)	
+    capy.PlayAnim("anim@heists@ornate_bank@grab_cash", "intro", 1300)	
     progressvetement()				            
 end
 			
 function chainonoff()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
     progressvetement()
 end
 			
 function glassesonoff()
-    Txpac.PlayAnim("clothingspecs", "take_off", 1300)	
+    capy.PlayAnim("clothingspecs", "take_off", 1300)	
     progressvetement()
 end
 
 function vestonoff()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
     progressvetement()
 end
 
 --- put back
 
 function torsoonoff2()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
     puttingback()
 end
 			
 function hatofon2()
-    Txpac.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
+    capy.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
     puttingback()
 end
 					
 function maskonoff2()				
-    Txpac.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
+    capy.PlayAnim("mp_masks@standard_car@ds@", "put_on_mask", 600)  
     puttingback()
 end
 
 function earsonoff2()
-    Txpac.PlayAnim("mp_cp_stolen_tut", "b_think", 600)  		
+    capy.PlayAnim("mp_cp_stolen_tut", "b_think", 600)  		
     puttingback()	             
 end			
 function tshirtonoff2()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
     puttingback()		           
 end
 			
 function armsonoff2()	
-    Txpac.PlayAnim("nmt_3_rcm-10", "cs_nigel_dual-10", 600) 	
+    capy.PlayAnim("nmt_3_rcm-10", "cs_nigel_dual-10", 600) 	
     puttingback()			            
 end
 			
 function pantsonoff2()
-    Txpac.PlayAnim("re@construction", "out_of_breath", 1300)		
+    capy.PlayAnim("re@construction", "out_of_breath", 1300)		
     puttingback()		           
 end
 			
 function shoesonoff2()
-    Txpac.PlayAnim("random@domestic", "pickup_low", 1300)		
+    capy.PlayAnim("random@domestic", "pickup_low", 1300)		
     puttingback()
 end
 			
 function bagonoff2()
-    Txpac.PlayAnim("anim@heists@ornate_bank@grab_cash", "intro", 1300)		
+    capy.PlayAnim("anim@heists@ornate_bank@grab_cash", "intro", 1300)		
     puttingback()			            
 end
 			
 function chainonoff2()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)	
     puttingback()
 end
 			
 function glassesonoff2()
-    Txpac.PlayAnim("clothingspecs", "take_off", 1300)	
+    capy.PlayAnim("clothingspecs", "take_off", 1300)	
     puttingback()
 end
 
 function vestonoff2()
-    Txpac.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
+    capy.PlayAnim("clothingtie", "try_tie_positive_a", 1500)
     puttingback()
 end
 
